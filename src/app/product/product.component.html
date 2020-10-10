@@ -1,0 +1,56 @@
+
+<mat-card fxFlex>
+  <mat-card-title>
+    Products Forms
+  </mat-card-title>
+
+  <mat-card-content>
+    <form [formGroup]= 'productForm' fxLayout = 'column' fxLayoutAlign = 'space-between' (ngSubmit)= 'save()' #form = 'ngForm'>
+      <input type='hidden'  formControlName = '_id'>
+      <mat-form-field>
+        <input matInput  placeholder="Product Name" formControlName ='name' name='name'>
+      </mat-form-field>
+
+      <mat-form-field>
+        <input matInput type = 'number' placeholder="Price" formControlName = 'price' name = 'price'>
+      </mat-form-field>
+
+      <mat-form-field>
+        <input matInput type = 'number' placeholder="Stock" formControlName = 'stock' name = 'stock'>
+      </mat-form-field>
+
+      <mat-form-field appearance="fill">
+        <mat-label>Toppings</mat-label>
+        <mat-select formControlName = 'departaments' multiple>
+          <mat-option *ngFor="let dep of departaments" [value]="dep">{{dep.name}}</mat-option>
+        </mat-select>
+      </mat-form-field>
+
+      <div fxLayout = 'row' fxLayoutAlign = 'end end'>
+        <button mat-button color = 'primary' type = 'submit'>Save</button>
+        <button mat-button color = 'warn' (click)= 'cancel()' type = 'reset'>Cancel</button>
+      </div>
+
+    </form>
+
+    <mat-list>
+      <h3 mat-subheader>Products</h3>
+      <mat-list-item *ngFor="let prod of products" >
+        <mat-icon mat-list-icon> folder</mat-icon>
+        <h4 mat-line>{{prod.name}}</h4>
+        <h4 mat-line> Price: {{prod.price|currency:'$'}}- Stock: {{prod.stock}}</h4>
+        <mat-chip-list mat-mat-line>
+          <mat-chip *ngFor="let d of prod.departaments" >{{d.name}}</mat-chip>
+        </mat-chip-list>
+        <button mat-icon-button color= 'accent' (click)= 'delete(prod)'>
+          <mat-icon>delete</mat-icon>
+        </button>
+        <button mat-icon-button color= 'primary' (click)= 'edit(prod)'>
+          <mat-icon>edit</mat-icon>
+        </button>
+
+      </mat-list-item>
+    </mat-list>
+  </mat-card-content>
+
+</mat-card>
