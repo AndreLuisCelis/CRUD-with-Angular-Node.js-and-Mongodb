@@ -1,31 +1,60 @@
-# CRUD-with-Angular-Node.js-and-Mongodb
+# CRUD Angular Node MongoDB
+### Aplicação que realiza criação e inserção de produtos e departamentos
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.0.6.
 
-## API
 
-Run `node app.js`  in folder serve for run the api in the `http://localhost:3000/`.
 
-## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+CRUD Angular Node MongoDB é uma aplicação desenvolvia para demonstrar um CRUD basico utilizando o Framework angular , node.js e o banco de dados não relacional MongoDB , na aplicação é possível:
 
-## Code scaffolding
+- criar departamentos
+- adicionar produtos e associa-los aos departamentos criados
+- editar e excluir produtos
+- editar e excluir departamentos
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
-## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
 
-## Running unit tests
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Tecnolgias
 
-## Running end-to-end tests
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+- __Angular__ - versão 10
+- __Angular__ -  Material
+- __node.js__ - backend
+- __Express__ - fast node.js network app framework
+- __MongoDB__ - banco de dados não relacional
+- __Mongoose__ - biblioteca para uso do mongoDB
 
-## Further help
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+
+## Installation
+
+É preciso [Node.js](https://nodejs.org/) v10+ para rodar.
+
+### Instalar as dependecias e iniciar o back end.
+ Na pasta raiz do projeto:
+
+```sh
+cd serve
+npm install
+node app.js
+```
+
+####  Iniciar o front end
+Na pasta raiz do projeto
+```sh
+npm install 
+ng serve --open
+```
+
+ O projeto será aberto no browser em http://localhost:4200
+
+
+
+
+
+
+
+
+
