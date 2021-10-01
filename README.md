@@ -32,25 +32,18 @@ CRUD Angular Node MongoDB é uma aplicação desenvolvia para demonstrar um CRUD
 
 ## Installation
 
-É preciso [Node.js](https://nodejs.org/) v10+ para rodar.
+É preciso [Docker Compose ](https://docs.docker.com/compose/install/)  para rodar.
 
 ### Instalar as dependecias e iniciar o back end.
  Na pasta raiz do projeto:
 
 ```sh
-cd serve
-npm install
-node app.js
+sudo docker-compose up
 ```
 
-####  Iniciar o front end
-Na pasta raiz do projeto
-```sh
-npm install 
-ng serve --open
-```
+O Docker Compose ira baixar as imagens e startar os container com as dependecias do projeto
 
- O projeto será aberto no browser em http://localhost:4200
+ O projeto será aberto no browser em http://localhost
 
 
 
