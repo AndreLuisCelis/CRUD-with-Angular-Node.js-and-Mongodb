@@ -25,6 +25,8 @@ CRUD Angular Node MongoDB é uma aplicação desenvolvia para demonstrar um CRUD
 - __Express__ - fast node.js network app framework
 - __MongoDB__ - banco de dados não relacional
 - __Mongoose__ - biblioteca para uso do mongoDB
+- __Docker__ - sistema gerenciador de containers
+- __DockerHub__ - repositório de imagens utilizadas para o projeto
 
 
 
