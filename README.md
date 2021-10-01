@@ -31,6 +31,7 @@ CRUD Angular Node MongoDB é uma aplicação desenvolvia para demonstrar um CRUD
 
 
 ## Installation
+![img](http://i.imgur.com/yourfilename.png)
 
 É preciso [Docker Compose ](https://docs.docker.com/compose/install/)  para rodar.
 
