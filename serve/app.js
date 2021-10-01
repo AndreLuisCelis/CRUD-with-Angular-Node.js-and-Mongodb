@@ -7,11 +7,12 @@ const departament_controller = require('./departament_controller');
 
 const app = express();
 
-app.use(bodyparser.json());
-app.use(bodyparser.urlencoded({extended: true}));
+app.use(express.json());
+app.use(express.urlencoded({extended: true}));
 app.use(cors());
 
-mongoose.connect('mongodb://localhost:27017/http_app',
+mongoose.Promise = global.Promise;
+mongoose.connect('mongodb://db/http_app',
 {useNewUrlParser: true , useUnifiedTopology: true });
 
 app.use('/departaments', departament_controller);

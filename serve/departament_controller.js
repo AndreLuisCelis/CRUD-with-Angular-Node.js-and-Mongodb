@@ -6,8 +6,8 @@ let Product = require('./products');
 
 router.post('/', (req, res) => {
     console.log(req.body);
-    let d = new Departament({ name: req.body.name });
-    d.save((err, dep) => {
+    let departament = new Departament({ name: req.body.name });
+    departament.save((err, dep) => {
         if (err) {
             res.status(500).send(err);
         } else {
@@ -36,7 +36,7 @@ router.delete('/:id', async (req, res) => {
            await Departament.deleteOne({ _id: id });
            res.status(200).send({});
         }
-       
+
     } catch(err) {
         res.status(500).send({msg: 'Not Permited'});
     }

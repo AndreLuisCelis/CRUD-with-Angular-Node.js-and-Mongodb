@@ -3,13 +3,13 @@ let router = express.Router();
 let Product = require( './products');
 
 router.post('/', (req, res) => {
-    let p = new Product({
+    let product = new Product({
       name: req.body.name,
       price: req.body.price,
       stock: req.body.price,
-      departaments: req.body.departaments 
+      departaments: req.body.departaments
     });
-    p.save((err , prod) => {
+    product.save((err , prod) => {
         if (err){
             res.status(500).send(err);
         } else {
@@ -24,7 +24,7 @@ router.get('/', (req , res) => {
             res.status(500).send(err);
         } else {
             res.status(200).send(prods);
-        } 
+        }
     });
 });
 

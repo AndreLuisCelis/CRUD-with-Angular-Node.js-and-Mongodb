@@ -46,6 +46,7 @@ export class DepartamentComponent implements OnInit, OnDestroy {
           this.clearFild();
         }, (err) => {
           console.error(err);
+          this.notify(err.message);
         })
       );
     }
